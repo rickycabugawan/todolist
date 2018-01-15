@@ -1,19 +1,19 @@
 [
     {
         "tasks": "First Task",
-        "done": false
+        "done": true
     },
     {
         "tasks": "Second Task",
-        "done": false
+        "done": true
     },
     {
         "tasks": "Third Task",
-        "done": false
+        "done": true
     },
     {
         "tasks": "Fourth Task",
-        "done": false
+        "done": true
     },
     {
         "tasks": "Fifth Task",
