@@ -1,0 +1,20 @@
+<?php 
+	$id = $_POST['id'];
+
+	$todos = file_get_contents('assets/todos.json');
+	$todos = json_decode($todos,true);
+
+	foreach ($todos as $key => &$todo) { //& means permission to modify the value of the array
+		if ($key==$id) {
+			if ($todo['done'] == false)
+			 	$todo['done'] = true;
+			else 
+				$todo['done'] = false;
+		}
+	}
+
+	$file = fopen('assets/todos.json','w');
+	fwrite($file, json_encode($todos, JSON_PRETTY_PRINT));
+	fclose($file);
+
+ ?>
